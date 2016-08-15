@@ -370,7 +370,7 @@ sampledboosting.wrapper <- function(dynamic, sampleRatio ){
   #make a name for the output file, using input file name and parameters passed
   #outLabel <- paste(dynamic,"_OUT_", nOuterFolds, "_", redSteps, "_", sampleRatio, "_", fixedMstop, "_", fixedNu, ".rda", sep = "")
   #save all variables from input file, parameters and output
-  list(y = y, Ynoise = dynamic$Ynoise, yBin = dynamic$yBin,yBinNoise = dynamic$yBinNoise, 
+  list(originalY = dynamic$Y ,y = y, Ynoise = dynamic$Ynoise, yBin = dynamic$yBin,yBinNoise = dynamic$yBinNoise, 
        originalX = originalX, originalXnoise = originalXnoise, coeffs = dynamic$coeffs, 
        predictors = dynamic$predictors, kappa = dynamic$kappa, samples = dynamic$samples, 
        simulations = simulations, nOuterFolds = nOuterFolds, redSteps = redSteps, 
